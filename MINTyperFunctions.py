@@ -315,7 +315,14 @@ def varriansfileRenamer(total_filenames):
         sorted_input.append(name)
 
 
-
+def correctPathCheck(pathName):
+    if pathName == "":
+        pass
+    elif pathName[-1] == "/":
+        pass
+    else:
+        pathName = pathName + "/"
+    return pathName
 
 
 
