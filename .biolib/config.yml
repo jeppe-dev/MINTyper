@@ -1,0 +1,58 @@
+biolib_version: 2
+modules:
+    main:
+        image: 'local-docker://mintyper:latest'
+        command: python3 MINTyper.py
+        input_files:
+            - COPY / /home/MINTyper/
+        output_files:
+            - COPY /home/MINTyper/output/ /
+        source_files: []
+
+arguments:
+    -
+        default_value: /home/MINTyper/testrun/data/
+        description: 'Assemblies: The path to the directory containing the assembly files'
+        key: '-i_path_assemblies'
+        key_value_separator: ' '
+        required: false
+        type: file
+    -
+        default_value: /home/MINTyper/testrun/template_sequence
+        description: Choose a reference to your query sequences against
+        key: '-ref'
+        key_value_separator: ' '
+        required: false
+        type: file
+    -
+        default_value: output
+        description: ''
+        key: '-o'
+        key_value_separator: ' '
+        required: true
+        type: hidden
+    -
+        default_value: ''
+        description: >-
+            Are Paired-ends used? If Paired-ends are used, it is important that
+            the files are written in the correct order, such as: sample1_1.fasta
+            sample1_2.fasta sample2_1.fasta sample2_1.fasta
+        key: ''
+        key_value_separator: ' '
+        required: false
+        type: toggle
+        options:
+            'off': ''
+            'on': '-pe'
+
+citation:
+    entry_type: article
+    author: >-
+        Malte Bjoern Hallgren, Soeren Overballe-Petersen, Ole Lund, Henrik
+        Hasman, Philip Thomas Lanken Conradsen Clausen
+    title: >-
+        MINTyper: A method for generating phylogenetic distance matrices with
+        long read sequencing data
+    journal: BioRxiv
+    year: '2020'
+    volume: 'pre-print'

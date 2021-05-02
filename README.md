@@ -1,7 +1,9 @@
+# MINTyper
+
 Read more about MINTyper here:
 > PUBLICATION TBAAA
 
-# Table of contents
+## Table of contents
 
 * [Introduction](#introduction)
 * [Requirements](#requirements)
@@ -10,10 +12,10 @@ Read more about MINTyper here:
 * [Standard usage](#standard-options)
 * [Licens](#licens)
     
-# Introduction
+## Introduction
 MINTyper is a tools designed to quickly a distance matrix from a set of input sequencing reads. It can take both short read from Illumina's sequencing platforms and long reads from Oxford Nanopore's platform. 
 
-# Requirements
+## Requirements
 
 * Unix based system
 * [Python3](https://www.python.org/) Any version of python3
@@ -21,7 +23,7 @@ MINTyper is a tools designed to quickly a distance matrix from a set of input se
 * [ccphylo](https://bitbucket.org/genomicepidemiology/ccphylo/src/master/) Installation requirements for ccphylo installation can be found at the bitbucket page.
 
 
-# Installation
+## Installation
 The following commands will install the latest version of MINTyper if python3, a C-compiler and zlib development files are installed (See KMA bitbucket).:
 
 ```bash
@@ -31,7 +33,7 @@ python3 setup.py
 ```
 
 
-# Database
+## Database
 
 MINTyper provides two options: Either the user can give a single fasta file as reference sequence by using the -ref argument, or a whole KMA indexed database can be used with the -db argument.
 
@@ -39,7 +41,7 @@ A guide for indexing a given database correctly can be found at https://bitbucke
 
 A database of complete bacterial genomes can be found at: http://www.cbs.dtu.dk/public/CGE/databases/KmerFinder/version/latest/bacteria.tar.gz 
 
-# Standard usage and testrun
+## Standard usage and testrun
 
 To make sure the installation has been completed succesfully, run MINTyper on the assembled MinION data found in the testrun folder:
 ```bash
@@ -121,7 +123,7 @@ optional arguments:
   -o OUTPUT_NAME        Name that you would like the output directory to be
                         called.
 ```
-# Licens
+## License
 Copyright (c) 2020, Malte Hallgren, Technical University of Denmark All rights reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
